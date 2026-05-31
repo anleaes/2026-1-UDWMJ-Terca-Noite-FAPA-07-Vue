@@ -4,21 +4,17 @@
       <h1 class="text-h4 text-left">Adicionar Descrição</h1>
       <q-card class="my-card">
         <q-card-section>
-          <q-form
-            @submit="onSubmit"
-            @reset="onReset"
-            class="q-gutter-md"
-          >
+          <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
             <div class="row">
               <div class="col-12">
-                <q-select 
+                <q-select
                   outlined
                   use-input
-                  input-debounce="0" 
+                  input-debounce="0"
                   v-model="category"
                   :options="categories"
                   @filter="filterCategories"
-                  label="Categoria *" 
+                  label="Categoria *"
                 />
               </div>
             </div>
@@ -30,12 +26,12 @@
                   label="Descrição *"
                   type="textarea"
                   v-model="description"
-                  :rules="[val => !!val || 'Campo é obrigatório']"
+                  :rules="[(val) => !!val || 'Campo é obrigatório']"
                 />
               </div>
             </div>
             <div class="text-right">
-              <q-btn label="Salvar" type="submit" color="primary"/>
+              <q-btn label="Salvar" type="submit" color="primary" />
               <q-btn label="Limpar" type="reset" color="primary" flat class="q-ml-sm" />
             </div>
           </q-form>
@@ -46,30 +42,30 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const description = ref('');
-const category = ref('');
+const description = ref('')
+const category = ref('')
 
 const stringCategories = [
-  "RPG (Role-Playing Game)",
-  "Ação e Aventura",
-  "FPS (First-Person Shooter)",
-  "Metroidvania",
-  "Roguelike / Roguelite",
-  "Estratégia (RTS / TBS)",
-  "Soulslike",
-  "Simulação",
-  "Sobrevivência",
-  "Hack and Slash",
-  "Quebra-cabeça (Puzzle)",
-  "Plataforma",
-  "Luta",
-  "Esportes",
-  "Stealth"
-];
+  'RPG (Role-Playing Game)',
+  'Ação e Aventura',
+  'FPS (First-Person Shooter)',
+  'Metroidvania',
+  'Roguelike / Roguelite',
+  'Estratégia (RTS / TBS)',
+  'Soulslike',
+  'Simulação',
+  'Sobrevivência',
+  'Hack and Slash',
+  'Quebra-cabeça (Puzzle)',
+  'Plataforma',
+  'Luta',
+  'Esportes',
+  'Stealth',
+]
 
-const categories = ref(stringCategories);
+const categories = ref(stringCategories)
 
 function filterCategories(val, update) {
   if (val === '') {
@@ -80,22 +76,20 @@ function filterCategories(val, update) {
   }
 
   update(() => {
-          const needle = val.toLowerCase()
-          categories.value = stringCategories.filter(
-            v => v.toLowerCase().indexOf(needle) > -1
-          )
-        })
+    const needle = val.toLowerCase()
+    categories.value = stringCategories.filter((v) => v.toLowerCase().indexOf(needle) > -1)
+  })
 }
 
 function onSubmit() {
   // Lógica para lidar com o envio do formulário
-  console.log('Categoria:', category.value);
-  console.log('Descrição:', description.value);
+  console.log('Categoria:', category.value)
+  console.log('Descrição:', description.value)
 }
 function onReset() {
   // Lógica para lidar com o reset do formulário
-  category.value = '';
-  description.value = '';
+  category.value = ''
+  description.value = ''
 }
 </script>
 

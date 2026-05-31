@@ -1,16 +1,12 @@
 <template>
   <div class="row justify-center">
     <div class="col-10 col-lg-6">
-      <h1 class="text-h4 text-left">Bem vindo Usuário</h1> <!-- TODO: Substituir "Usuário" pelo nome do usuário logado -->
+      <h1 class="text-h4 text-left">Bem vindo Usuário</h1>
+      <!-- TODO: Substituir "Usuário" pelo nome do usuário logado -->
 
       <div class="row">
         <div class="col-12">
-          <q-input
-            v-model="stringSearch"
-            outlined
-            label="Pesquisar por nome"
-            type="text"
-          >
+          <q-input v-model="stringSearch" outlined label="Pesquisar por nome" type="text">
             <template v-slot:prepend>
               <q-icon name="search" />
             </template>
@@ -20,11 +16,7 @@
 
       <div>
         <div class="row q-mt-lg q-col-gutter-md">
-          <div
-            v-for="game in filteredGames"
-            :key="game.title"
-            class="col-12 col-sm-6 col-md-4"
-          >
+          <div v-for="game in filteredGames" :key="game.title" class="col-12 col-sm-6 col-md-4">
             <q-card class="my-card full-height">
               <img src="https://cdn.quasar.dev/img/mountains.jpg" />
 
@@ -49,9 +41,9 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue';
+import { computed, ref } from 'vue'
 
-const stringSearch = ref('');
+const stringSearch = ref('')
 
 const games = [
   {
@@ -69,15 +61,15 @@ const games = [
     description: 'A roguelike dungeon crawler where you play as Zagreus, the son of Hades.',
     category: 'Roguelike / Roguelite',
   },
-];
+]
 
 const filteredGames = computed(() => {
-  const search = stringSearch.value.trim().toLowerCase();
+  const search = stringSearch.value.trim().toLowerCase()
 
   if (!search) {
-    return games;
+    return games
   }
 
-  return games.filter((game) => game.title.toLowerCase().includes(search));
-});
+  return games.filter((game) => game.title.toLowerCase().includes(search))
+})
 </script>
