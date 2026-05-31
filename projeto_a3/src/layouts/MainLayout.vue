@@ -7,7 +7,7 @@
 
         <q-toolbar-title>
           <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
+            <img src="../assets/logo.png" alt="Logo" />
           </q-avatar>
           Ice
         </q-toolbar-title>
@@ -20,8 +20,12 @@
       </q-tabs>
     </q-header>
 
-    <q-drawer show-if-above v-model="leftDrawerOpen" side="left" bordered>
-      <!-- drawer content -->
+    <q-drawer v-model="leftDrawerOpen" side="left" bordered>
+      <q-list>
+        <q-item-label header> Menu </q-item-label>
+
+        <EssentialLink v-for="link in linksList" :key="link.title" v-bind="link" />
+      </q-list>
     </q-drawer>
 
     <q-page-container>
@@ -31,19 +35,22 @@
   </q-layout>
 </template>
 
-<script>
-import { ref } from 'vue'
+<script setup>
+import EssentialLink from 'src/components/EssentialLink.vue';
+import { ref } from 'vue';
 
-export default {
-  setup () {
-    const leftDrawerOpen = ref(false)
+const leftDrawerOpen = ref(false);
 
-    return {
-      leftDrawerOpen,
-      toggleLeftDrawer () {
-        leftDrawerOpen.value = !leftDrawerOpen.value
-      }
-    }
-  }
+const linksList = [
+  {
+    title: 'Docs',
+    caption: 'quasar.dev',
+    icon: 'school',
+    link: 'https://quasar.dev',
+  },
+];
+
+function toggleLeftDrawer () {
+  leftDrawerOpen.value = !leftDrawerOpen.value;
 }
 </script>
