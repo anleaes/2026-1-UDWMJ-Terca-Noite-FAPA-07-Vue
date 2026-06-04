@@ -1,0 +1,79 @@
+{
+  "main-dashboard": {
+    "referencia": "Maio/2026",
+    "resumoGeral": {
+      "valorTotalMes": 145890.5,
+      "quantidadeJogosVendidos": 842,
+      "ticketMedio": 173.26
+    },
+    "destaquesPrincipais": {
+      "jogoMaisVendidoPorValor": {
+        "id": 1,
+        "nome": "Elden Ring",
+        "estilo": "RPG",
+        "valorArrecadado": 35000.0,
+        "quantidade": 140
+      },
+      "jogoMaisVendidoPorQuantidade": {
+        "id": 2,
+        "nome": "Stardew Valley",
+        "estilo": "Simulação",
+        "valorArrecadado": 5000.0,
+        "quantidade": 200
+      }
+    },
+    "top10JogosPorValor": [
+      { "posicao": 1, "nome": "Elden Ring", "valor": 35000.0 },
+      { "posicao": 2, "nome": "Cyberpunk 2077", "valor": 22000.0 },
+      { "posicao": 3, "nome": "Baldur's Gate 3", "valor": 19500.0 },
+      { "posicao": 4, "nome": "Red Dead Redemption 2", "valor": 15000.0 },
+      { "posicao": 5, "nome": "Hogwarts Legacy", "valor": 12000.0 },
+      { "posicao": 6, "nome": "Resident Evil 4 Remake", "valor": 9500.0 },
+      { "posicao": 7, "nome": "Diablo IV", "valor": 8000.0 },
+      { "posicao": 8, "nome": "Street Fighter 6", "valor": 7000.0 },
+      { "posicao": 9, "nome": "Final Fantasy VII Rebirth", "valor": 6500.0 },
+      { "posicao": 10, "nome": "God of War Ragnarok", "valor": 6000.0 }
+    ],
+    "top10JogosPorQuantidade": [
+      { "posicao": 1, "nome": "Stardew Valley", "quantidade": 200 },
+      { "posicao": 2, "nome": "Vampire Survivors", "quantidade": 180 },
+      { "posicao": 3, "nome": "Elden Ring", "quantidade": 140 },
+      { "posicao": 4, "nome": "Hollow Knight", "quantidade": 115 },
+      { "posicao": 5, "nome": "Terraria", "quantidade": 90 },
+      { "posicao": 6, "nome": "Baldur's Gate 3", "quantidade": 78 },
+      { "posicao": 7, "nome": "Cyberpunk 2077", "quantidade": 65 },
+      { "posicao": 8, "nome": "Celeste", "quantidade": 50 },
+      { "posicao": 9, "nome": "Hades", "quantidade": 45 },
+      { "posicao": 10, "nome": "Dead Cells", "quantidade": 39 }
+    ],
+    "top5EstilosPorValor": [
+      { "estilo": "RPG", "valor": 60500.0 },
+      { "estilo": "Ação e Aventura", "valor": 42000.0 },
+      { "estilo": "Shooter", "valor": 15000.0 },
+      { "estilo": "Luta", "valor": 9000.0 },
+      { "estilo": "Terror", "valor": 8500.0 }
+    ],
+    "top5EstilosPorQuantidade": [
+      { "estilo": "Indie", "quantidade": 350 },
+      { "estilo": "RPG", "quantidade": 250 },
+      { "estilo": "Ação e Aventura", "quantidade": 120 },
+      { "estilo": "Simulação", "quantidade": 85 },
+      { "estilo": "Plataforma", "quantidade": 55 }
+    ],
+    "metricasExtrasIdeias": {
+      "vendasPorPlataforma": [
+        { "plataforma": "PC", "porcentagem": 45 },
+        { "plataforma": "PlayStation 5", "porcentagem": 35 },
+        { "plataforma": "Xbox Series", "porcentagem": 15 },
+        { "plataforma": "Nintendo Switch", "porcentagem": 5 }
+      ],
+      "tendenciaDeVendasDiarias": [
+        { "dia": "01", "valorVendido": 4500.0, "quantidade": 30 },
+        { "dia": "02", "valorVendido": 5200.0, "quantidade": 35 },
+        { "dia": "03", "valorVendido": 3800.0, "quantidade": 22 },
+        { "dia": "04", "valorVendido": 7100.0, "quantidade": 50 },
+        { "dia": "05", "valorVendido": 6500.0, "quantidade": 42 }
+      ]
+    }
+  }
+}
