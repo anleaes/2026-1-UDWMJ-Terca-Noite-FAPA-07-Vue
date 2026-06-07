@@ -16,17 +16,17 @@
 
       <div>
         <div class="row q-mt-lg q-col-gutter-md">
-          <div v-for="game in filteredGames" :key="game.title" class="col-12 col-sm-6 col-md-4">
+          <div v-for="game in filteredGames" :key="game.nome" class="col-12 col-sm-6 col-md-4">
             <q-card class="my-card full-height">
-              <img src="https://cdn.quasar.dev/img/mountains.jpg" />
+              <img :src="game.imagem" width="460" height="215" />
 
               <q-card-section>
-                <div class="text-h6">{{ game.title }}</div>
-                <div class="text-subtitle2">{{ game.category }}</div>
+                <div class="text-h6">{{ game.nome }}</div>
+                <div class="text-subtitle2">{{ game.estilo }}</div>
               </q-card-section>
 
               <q-card-section class="q-pt-none">
-                {{ game.description }}
+                {{ game.descricao }}
               </q-card-section>
             </q-card>
           </div>
@@ -41,35 +41,31 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
+import { getAllGames } from 'src/services/GamesService'
+import { computed, onMounted, ref } from 'vue'
+
+const games = ref([])
+
+onMounted(() => {
+  getAllGames()
+    .then((response) => {
+      games.value = response
+    })
+    .catch((error) => {
+      console.error(error)
+      alert('Erro ao carregar jogos')
+    })
+})
 
 const stringSearch = ref('')
-
-const games = [
-  {
-    title: 'The Legend of Zelda: Breath of the Wild',
-    description: 'An open-world action-adventure game set in the kingdom of Hyrule.',
-    category: 'Ação e Aventura',
-  },
-  {
-    title: 'Dark Souls III',
-    description: 'A challenging action RPG known for its difficulty and intricate world design.',
-    category: 'RPG (Role-Playing Game)',
-  },
-  {
-    title: 'Hades',
-    description: 'A roguelike dungeon crawler where you play as Zagreus, the son of Hades.',
-    category: 'Roguelike / Roguelite',
-  },
-]
 
 const filteredGames = computed(() => {
   const search = stringSearch.value.trim().toLowerCase()
 
   if (!search) {
-    return games
+    return games.value
   }
 
-  return games.filter((game) => game.title.toLowerCase().includes(search))
+  return games.value.filter((game) => game.nome.toLowerCase().includes(search))
 })
 </script>

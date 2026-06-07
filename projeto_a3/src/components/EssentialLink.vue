@@ -1,5 +1,5 @@
 <template>
-  <q-item clickable tag="a" target="_blank" :href="props.link">
+  <q-item clickable tag="a" target="_blank" @click="navigate()">
     <q-item-section v-if="props.icon" avatar>
       <q-icon :name="props.icon" />
     </q-item-section>
@@ -12,6 +12,10 @@
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
 const props = defineProps({
   title: {
     type: String,
@@ -33,4 +37,8 @@ const props = defineProps({
     default: '',
   },
 })
+
+function navigate() {
+  router.push(props.link)
+}
 </script>

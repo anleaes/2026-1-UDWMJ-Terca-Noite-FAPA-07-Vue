@@ -12,11 +12,11 @@
         </q-toolbar-title>
       </q-toolbar>
 
-      <q-tabs align="left">
+      <!-- <q-tabs align="left">
         <q-route-tab to="/page1" label="Page One" />
         <q-route-tab to="/page2" label="Page Two" />
         <q-route-tab to="/page3" label="Page Three" />
-      </q-tabs>
+      </q-tabs> -->
     </q-header>
 
     <q-drawer v-model="leftDrawerOpen" side="left" bordered>
@@ -41,10 +41,10 @@ const leftDrawerOpen = ref(false)
 
 const linksList = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev',
+    title: 'Jogos',
+    caption: 'Visualizar jogos',
+    icon: 'sports_esports',
+    link: '/jogos',
   },
 ]
 
