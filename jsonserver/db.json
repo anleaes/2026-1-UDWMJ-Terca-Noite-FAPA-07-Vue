@@ -10,6 +10,7 @@
       "jogoMaisVendidoPorValor": {
         "id": 1,
         "nome": "Elden Ring",
+        "imagemUrl": "https://upload.wikimedia.org/wikipedia/pt/thumb/0/0d/Elden_Ring_capa.jpg/250px-Elden_Ring_capa.jpg",
         "estilo": "RPG",
         "valorArrecadado": 35000.0,
         "quantidade": 140
@@ -17,6 +18,7 @@
       "jogoMaisVendidoPorQuantidade": {
         "id": 2,
         "nome": "Stardew Valley",
+        "imagemUrl": "https://tm.ibxk.com.br/2024/03/19/19161554838063.jpg?ims=1200x675",
         "estilo": "Simulação",
         "valorArrecadado": 5000.0,
         "quantidade": 200
@@ -47,18 +49,18 @@
       { "posicao": 10, "nome": "Dead Cells", "quantidade": 39 }
     ],
     "top5EstilosPorValor": [
-      { "estilo": "RPG", "valor": 60500.0 },
-      { "estilo": "Ação e Aventura", "valor": 42000.0 },
-      { "estilo": "Shooter", "valor": 15000.0 },
-      { "estilo": "Luta", "valor": 9000.0 },
-      { "estilo": "Terror", "valor": 8500.0 }
+      { "estilo": "RPG", "valor": 60500.0, "cor": "#008FFB" },
+      { "estilo": "Ação e Aventura", "valor": 42000.0, "cor": "#00E396" },
+      { "estilo": "Shooter", "valor": 15000.0, "cor": "#FEB019" },
+      { "estilo": "Luta", "valor": 9000.0, "cor": "#FF4560" },
+      { "estilo": "Terror", "valor": 8500.0, "cor": "#775DD0" }
     ],
     "top5EstilosPorQuantidade": [
-      { "estilo": "Indie", "quantidade": 350 },
-      { "estilo": "RPG", "quantidade": 250 },
-      { "estilo": "Ação e Aventura", "quantidade": 120 },
-      { "estilo": "Simulação", "quantidade": 85 },
-      { "estilo": "Plataforma", "quantidade": 55 }
+      { "estilo": "Indie", "quantidade": 350, "cor": "#3F51B5" },
+      { "estilo": "RPG", "quantidade": 250, "cor": "#008FFB" },
+      { "estilo": "Ação e Aventura", "quantidade": 120, "cor": "#00E396" },
+      { "estilo": "Simulação", "quantidade": 85, "cor": "#546E7A" },
+      { "estilo": "Plataforma", "quantidade": 55, "cor": "#D4526E" }
     ],
     "metricasExtrasIdeias": {
       "vendasPorPlataforma": [
