@@ -11,11 +11,23 @@
 
       <div class="row q-col-gutter-md q-mb-md">
         <div class="col-6">
-          <GameHighestSales :game="dashboard?.destaquesPrincipais?.jogoMaisVendidoPorValor" />
+          <GameHighestSales
+            class="cursor-pointer zoom-card"
+            :game="dashboard?.destaquesPrincipais?.jogoMaisVendidoPorValor"
+            @click="
+              navigate(`/jogos/${dashboard?.destaquesPrincipais?.jogoMaisVendidoPorValor.id}`)
+            "
+          />
         </div>
 
         <div class="col-6">
-          <GameBestSeller :game="dashboard?.destaquesPrincipais?.jogoMaisVendidoPorQuantidade" />
+          <GameBestSeller
+            class="cursor-pointer zoom-card"
+            :game="dashboard?.destaquesPrincipais?.jogoMaisVendidoPorQuantidade"
+            @click="
+              navigate(`/jogos/${dashboard?.destaquesPrincipais?.jogoMaisVendidoPorQuantidade.id}`)
+            "
+          />
         </div>
       </div>
 
@@ -91,6 +103,9 @@ import GameHighestSales from 'src/components/GameHighestSales.vue'
 import GameBestSeller from 'src/components/GameBestSeller.vue'
 import IceBarChart from 'src/components/IceBarChart.vue'
 import IcePieChart from 'src/components/IcePieChart.vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const isLoadingResults = ref(true)
 const dashboard = ref({})
@@ -127,6 +142,11 @@ onMounted(() => {
     })
 })
 
+function navigate(route) {
+  console.log(route)
+  router.push(route)
+}
+
 function populateValueBarChartInfo() {
   dashboard.value.top10JogosPorValor.forEach((game) => {
     barChartDataSeriesValueGames.value.push(game.valor)
@@ -157,3 +177,17 @@ function populateQntPieChartInfo() {
   })
 }
 </script>
+
+<style scoped>
+.zoom-card {
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+.zoom-card:hover {
+  transform: scale(1.03);
+  z-index: 1;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+</style>
