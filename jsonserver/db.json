@@ -77,5 +77,207 @@
         { "dia": "05", "valorVendido": 6500.0, "quantidade": 42 }
       ]
     }
-  }
+  },
+  "jogos": [
+    {
+      "id": 1,
+      "nome": "Cyberpunk 2077",
+      "estilo": "RPG de Ação",
+      "descricao": "Um jogo de RPG de ação em mundo aberto ambientado na megalópole de Night City, onde você joga como um mercenário em busca de imortalidade.",
+      "valor": 150.0,
+      "imagem": "https://cdn1.epicgames.com/offer/77f2b98e2cef40c8a7437518bf420e47/EGS_Cyberpunk2077_CDPROJEKTRED_S1_03_2560x1440-359e77d3cd0a40aebf3bbc130d14c5c7",
+      "quantidade_vendas_mes": 100,
+      "receita_total_mes": 15000.0
+    },
+    {
+      "id": 2,
+      "nome": "The Witcher 3: Wild Hunt",
+      "estilo": "RPG de Ação",
+      "descricao": "Aventure-se como Geralt de Rívia, um caçador de monstros, em um vasto mundo aberto cheio de perigos, escolhas difíceis e narrativas ricas.",
+      "valor": 80.0,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/ad9240e088f953a84aee814034c50a6a92bf4516/header.jpg?t=1768303991",
+      "quantidade_vendas_mes": 250,
+      "receita_total_mes": 20000.0
+    },
+    {
+      "id": 3,
+      "nome": "Elden Ring",
+      "estilo": "RPG de Ação",
+      "descricao": "Explore as vastas e perigosas Terras Intermédias neste RPG desafiador criado por Hidetaka Miyazaki e George R. R. Martin.",
+      "valor": 250.0,
+      "imagem": "https://assets.nuuvem.com/image/upload/v1/products/618418052f91a002e3f9cf6b/sharing_images/dl3d5ccidn9wlkemhfjr.jpg",
+      "quantidade_vendas_mes": 500,
+      "receita_total_mes": 125000.0
+    },
+    {
+      "id": 4,
+      "nome": "Minecraft",
+      "estilo": "Sandbox / Sobrevivência",
+      "descricao": "Construa, minere e sobreviva em um mundo de blocos gerado proceduralmente que oferece possibilidades infinitas de criatividade.",
+      "valor": 100.0,
+      "imagem": "https://images.steamusercontent.com/ugc/3280058944920502233/1B8626F30A851AD123405C97E4E7D2556C1E792F/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+      "quantidade_vendas_mes": 1000,
+      "receita_total_mes": 100000.0
+    },
+    {
+      "id": 5,
+      "nome": "Grand Theft Auto V",
+      "estilo": "Ação / Aventura",
+      "descricao": "Explore a cidade de Los Santos e viva a vida de três criminosos bem diferentes neste aclamado jogo de mundo aberto.",
+      "valor": 120.0,
+      "imagem": "https://lockgamer.com/wp-content/uploads/2012/11/coverreg610-e1352422958989.jpg",
+      "quantidade_vendas_mes": 800,
+      "receita_total_mes": 96000.0
+    },
+    {
+      "id": 6,
+      "nome": "Red Dead Redemption 2",
+      "estilo": "Ação / Aventura",
+      "descricao": "Uma jornada épica e emocionante pelo impiedoso coração do faroeste americano acompanhando a gangue de Dutch Van der Linde.",
+      "valor": 150.0,
+      "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNUHE1TegKlZACw9Alth5jd-G4487KcITRhQ&s",
+      "quantidade_vendas_mes": 300,
+      "receita_total_mes": 45000.0
+    },
+    {
+      "id": 7,
+      "nome": "Stardew Valley",
+      "estilo": "Simulação / RPG",
+      "descricao": "Herde a velha fazenda do seu avô, cultive plantações, crie animais, faça amizades e restaure a glória da Vila Pelicanos.",
+      "valor": 30.0,
+      "imagem": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/413150/capsule_616x353.jpg?t=1754692865",
+      "quantidade_vendas_mes": 1500,
+      "receita_total_mes": 45000.0
+    },
+    {
+      "id": 8,
+      "nome": "Hollow Knight",
+      "estilo": "Metroidvania / Ação",
+      "descricao": "Desça até as ruínas sombrias e infestadas de insetos de Hallownest neste premiado jogo de plataforma desenhado à mão.",
+      "valor": 45.0,
+      "imagem": "https://gaming-cdn.com/images/products/2198/orig/hollow-knight-pc-mac-steam-cover.jpg?v=1755854893",
+      "quantidade_vendas_mes": 600,
+      "receita_total_mes": 27000.0
+    },
+    {
+      "id": 9,
+      "nome": "The Legend of Zelda: Tears of the Kingdom",
+      "estilo": "Ação / Aventura",
+      "descricao": "Explore a vasta terra e os céus de Hyrule utilizando novas habilidades criativas para combater uma ameaça ancestral.",
+      "valor": 350.0,
+      "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7WOWErvqGXUZ2F8k5vx-21syEzsMjG94T7A&s",
+      "quantidade_vendas_mes": 200,
+      "receita_total_mes": 70000.0
+    },
+    {
+      "id": 10,
+      "nome": "Super Mario Odyssey",
+      "estilo": "Plataforma 3D",
+      "descricao": "Viaje pelo mundo a bordo da Odyssey com Mario e seu novo amigo Cappy para resgatar a Princesa Peach das garras do Bowser.",
+      "valor": 250.0,
+      "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3FqAPExRaY0RFOGfuS7E-l89vq8zyWXKITA&s",
+      "quantidade_vendas_mes": 150,
+      "receita_total_mes": 37500.0
+    },
+    {
+      "id": 11,
+      "nome": "God of War Ragnarök",
+      "estilo": "Ação / Aventura",
+      "descricao": "Acompanhe Kratos e Atreus em uma jornada mítica pelos Nove Reinos em busca de respostas antes da profetizada batalha do Ragnarök.",
+      "valor": 350.0,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2322010/header.jpg?t=1776465233",
+      "quantidade_vendas_mes": 400,
+      "receita_total_mes": 140000.0
+    },
+    {
+      "id": 12,
+      "nome": "Marvel's Spider-Man 2",
+      "estilo": "Ação / Aventura",
+      "descricao": "Balance pelas ruas de Nova York controlando Peter Parker e Miles Morales enquanto enfrentam ameaças como o Venom e Kraven.",
+      "valor": 350.0,
+      "imagem": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2651280/cb8da9b3e99cf7362cd88c10a0544b7fe892ccad/capsule_616x353.jpg?t=1763569811",
+      "quantidade_vendas_mes": 600,
+      "receita_total_mes": 210000.0
+    },
+    {
+      "id": 13,
+      "nome": "Call of Duty: Modern Warfare III",
+      "estilo": "Tiro em Primeira Pessoa (FPS)",
+      "descricao": "Junte-se à Força-Tarefa 141 e enfrente a ameaça global definitiva neste intenso jogo de tiro militar tático e multiplayer competitivo.",
+      "valor": 300.0,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2519060/header.jpg?t=1753807280",
+      "quantidade_vendas_mes": 700,
+      "receita_total_mes": 210000.0
+    },
+    {
+      "id": 14,
+      "nome": "EA Sports FC 24",
+      "estilo": "Esportes / Simulação",
+      "descricao": "Experimente um novo nível de realismo no futebol mundial com milhares de jogadores, times autênticos e ligas oficiais.",
+      "valor": 350.0,
+      "imagem": "https://img.odcdn.com.br/wp-content/uploads/2023/07/EA-Sports-FC-logo.png",
+      "quantidade_vendas_mes": 1200,
+      "receita_total_mes": 420000.0
+    },
+    {
+      "id": 15,
+      "nome": "Baldur's Gate 3",
+      "estilo": "RPG de Turnos",
+      "descricao": "Reúna seu grupo e retorne aos Forgotten Realms em uma rica história de amizade, traição, sacrifício e sobrevivência.",
+      "valor": 200.0,
+      "imagem": "https://www.adrenaline.com.br/wp-content/uploads/2023/08/baldurs-gate-3-912x569.jpg",
+      "quantidade_vendas_mes": 800,
+      "receita_total_mes": 160000.0
+    },
+    {
+      "id": 16,
+      "nome": "Hades",
+      "estilo": "Roguelike / Ação",
+      "descricao": "Desafie o deus dos mortos e lute para escapar do Submundo grego neste frenético jogo de exploração de masmorras.",
+      "valor": 50.0,
+      "imagem": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1145360/header.jpg?t=1758127023",
+      "quantidade_vendas_mes": 500,
+      "receita_total_mes": 25000.0
+    },
+    {
+      "id": 17,
+      "nome": "Resident Evil 4 Remake",
+      "estilo": "Survival Horror / Ação",
+      "descricao": "A clássica missão de resgate de Leon S. Kennedy completamente reimaginada com gráficos modernos e jogabilidade atualizada.",
+      "valor": 250.0,
+      "imagem": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2050650/capsule_616x353.jpg?t=1772502922",
+      "quantidade_vendas_mes": 350,
+      "receita_total_mes": 87500.0
+    },
+    {
+      "id": 18,
+      "nome": "Street Fighter 6",
+      "estilo": "Luta",
+      "descricao": "Prove sua força nas ruas com um novo visual vibrante, modos inovadores e o clássico combate técnico de artes marciais.",
+      "valor": 280.0,
+      "imagem": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1364780/header.jpg?t=1779953790",
+      "quantidade_vendas_mes": 200,
+      "receita_total_mes": 56000.0
+    },
+    {
+      "id": 19,
+      "nome": "Animal Crossing: New Horizons",
+      "estilo": "Simulação / Social",
+      "descricao": "Crie o seu próprio paraíso em uma ilha deserta, personalizando sua casa e interagindo com adoráveis animais antropomórficos.",
+      "valor": 250.0,
+      "imagem": "https://assets.nintendo.com/image/upload/q_auto/f_auto/store/software/switch2/70010000110440/749cb30819c96dc883bf8ac71dfe5a27469b2ea035f81775dd23ab8b8c82bc9d",
+      "quantidade_vendas_mes": 300,
+      "receita_total_mes": 75000.0
+    },
+    {
+      "id": 20,
+      "nome": "Among Us",
+      "estilo": "Dedução Social / Multiplayer",
+      "descricao": "Trabalhe em equipe para manter uma nave espacial funcionando, mas desconfie de todos: há impostores assassinos a bordo.",
+      "valor": 15.0,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/945360/capsule_616x353.jpg?t=1757444903",
+      "quantidade_vendas_mes": 2000,
+      "receita_total_mes": 30000.0
+    }
+  ]
 }
