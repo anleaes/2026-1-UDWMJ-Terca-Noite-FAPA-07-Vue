@@ -17,7 +17,7 @@
       <div>
         <div class="row q-mt-lg q-col-gutter-md">
           <div v-for="game in filteredGames" :key="game.nome" class="col-12 col-sm-6 col-md-4">
-            <q-card class="my-card full-height">
+            <q-card class="my-card full-height cursor-pointer zoom-card" @click="navigate(game.id)">
               <img :src="game.imagem" width="460" height="215" />
 
               <q-card-section>
@@ -43,6 +43,9 @@
 <script setup>
 import { getAllGames } from 'src/services/GamesService'
 import { computed, onMounted, ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const games = ref([])
 
@@ -57,6 +60,10 @@ onMounted(() => {
     })
 })
 
+function navigate(id) {
+  router.push(`/jogos/${id}`)
+}
+
 const stringSearch = ref('')
 
 const filteredGames = computed(() => {
@@ -69,3 +76,17 @@ const filteredGames = computed(() => {
   return games.value.filter((game) => game.nome.toLowerCase().includes(search))
 })
 </script>
+
+<style scoped>
+.zoom-card {
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+.zoom-card:hover {
+  transform: scale(1.03);
+  z-index: 1;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+</style>

@@ -41,6 +41,12 @@ const leftDrawerOpen = ref(false)
 
 const linksList = [
   {
+    title: 'Dashboard',
+    caption: 'Dashboard de Vendas',
+    icon: 'analytics',
+    link: '/',
+  },
+  {
     title: 'Jogos',
     caption: 'Visualizar jogos',
     icon: 'sports_esports',
