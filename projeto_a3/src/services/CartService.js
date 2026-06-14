@@ -1,11 +1,19 @@
 import { get, post, remove } from './ApiService'
 import { buildApiUrl, getApiBaseUrl } from './api-url'
+import { useCartStore } from 'src/stores/cart-store'
 
 function getCartGames() {
+  const cartStore = useCartStore()
+
+  if (cartStore.items.length > 0) {
+    return Promise.resolve(cartStore.items)
+  }
+
   const url = buildApiUrl(getApiBaseUrl(), '/carrinho')
   return new Promise((resolve, reject) => {
     get(url)
       .then((response) => {
+        cartStore.setItems(response)
         resolve(response)
       })
       .catch((error) => {
@@ -15,6 +23,7 @@ function getCartGames() {
 }
 
 function addGameToCart(game) {
+  const cartStore = useCartStore()
   const url = buildApiUrl(getApiBaseUrl(), '/carrinho')
   const cartItem = {
     id: `${game.id}-${Date.now()}`,
@@ -29,6 +38,7 @@ function addGameToCart(game) {
   return new Promise((resolve, reject) => {
     post(url, cartItem)
       .then((response) => {
+        cartStore.addItem(response)
         resolve(response)
       })
       .catch((error) => {
@@ -38,10 +48,12 @@ function addGameToCart(game) {
 }
 
 function removeCartGame(cartItemId) {
+  const cartStore = useCartStore()
   const url = buildApiUrl(getApiBaseUrl(), `/carrinho/${cartItemId}`)
   return new Promise((resolve, reject) => {
     remove(url)
       .then((response) => {
+        cartStore.removeItem(cartItemId)
         resolve(response)
       })
       .catch((error) => {
