@@ -37,7 +37,7 @@ import {
   buildGameUpdateRequest,
   createGameForm,
   updateGameFormField,
-} from 'src/pages/view-game-form'
+} from 'src/services/GameFormService'
 import { getGame, updateGame } from 'src/services/GamesService'
 import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'

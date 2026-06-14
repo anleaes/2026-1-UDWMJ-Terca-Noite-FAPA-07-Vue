@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-import { buildBuyGameRoute } from 'src/pages/view-game-form'
+import { buildBuyGameRoute } from 'src/services/GameFormService'
 import { formatBRL } from 'src/utils/formatters'
 
 defineProps({

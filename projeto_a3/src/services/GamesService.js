@@ -14,6 +14,19 @@ function getAllGames() {
   })
 }
 
+function getAllCategories() {
+  const url = buildApiUrl(getApiBaseUrl(), '/categorias')
+  return new Promise((resolve, reject) => {
+    get(url)
+      .then((response) => {
+        resolve(response)
+      })
+      .catch((error) => {
+        reject(error)
+      })
+  })
+}
+
 function getGame(id) {
   const url = buildApiUrl(getApiBaseUrl(), `/jogos/${id}`)
   return new Promise((resolve, reject) => {
@@ -40,4 +53,4 @@ function updateGame(id, gamePayload) {
   })
 }
 
-export { getAllGames, getGame, updateGame }
+export { getAllCategories, getAllGames, getGame, updateGame }
