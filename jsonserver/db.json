@@ -490,25 +490,6 @@
       "nome": "Dedução Social / Multiplayer"
     }
   ],
-  "carrinho": [
-    {
-      "id": "JxCjU1VqKNE",
-      "jogoId": "3",
-      "nome": "Elden Ring",
-      "estilo": "RPG de Ação",
-      "valor": 250,
-      "imagem": "https://assets.nuuvem.com/image/upload/v1/products/618418052f91a002e3f9cf6b/sharing_images/dl3d5ccidn9wlkemhfjr.jpg",
-      "descricao": "Explore as vastas e perigosas Terras Intermédias neste RPG desafiador criado por Hidetaka Miyazaki e George R. R. Martin."
-    },
-    {
-      "id": "n8kwF9MOZoo",
-      "jogoId": "4",
-      "nome": "Minecraft",
-      "estilo": "Sandbox / Sobrevivência",
-      "valor": 100,
-      "imagem": "https://images.steamusercontent.com/ugc/3280058944920502233/1B8626F30A851AD123405C97E4E7D2556C1E792F/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
-      "descricao": "Construa, minere e sobreviva em um mundo de blocos gerado proceduralmente que oferece possibilidades infinitas de criatividade."
-    }
-  ],
+  "carrinho": [],
   "$schema": "./node_modules/json-server/schema.json"
 }

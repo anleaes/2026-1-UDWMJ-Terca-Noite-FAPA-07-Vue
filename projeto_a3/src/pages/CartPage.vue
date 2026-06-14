@@ -35,13 +35,16 @@
 import CartItem from 'src/components/CartItem.vue'
 import CartSummaryCard from 'src/components/CartSummaryCard.vue'
 import { getCartGames, removeCartGame } from 'src/services/CartService'
+import { useCartStore } from 'src/stores/cart-store'
 import { computed, onMounted, ref } from 'vue'
 
-const cartItems = ref([])
+const cartStore = useCartStore()
 const isLoading = ref(true)
 
+const cartItems = computed(() => cartStore.items)
+
 const cartTotal = computed(() => {
-  return cartItems.value.reduce((total, item) => total + Number(item.valor), 0)
+  return cartStore.total
 })
 
 function loadCart() {
@@ -62,9 +65,6 @@ function loadCart() {
 
 function removeItem(id) {
   removeCartGame(id)
-    .then(() => {
-      cartItems.value = cartItems.value.filter((item) => item.id !== id)
-    })
     .catch((error) => {
       console.error(error)
       alert('Erro ao remover jogo do carrinho')
