@@ -22,8 +22,18 @@ const routes = [
   },
   {
     path: '/jogos/:id/comprar',
-    component: () => import('layouts/MainLayout.vue'),
+    component: () => import('layouts/StoreLayout.vue'),
     children: [{ path: '', component: () => import('pages/BuyGamePage.vue') }],
+  },
+  {
+    path: '/loja',
+    component: () => import('layouts/StoreLayout.vue'),
+    children: [{ path: '', component: () => import('pages/StorePage.vue') }],
+  },
+  {
+    path: '/carrinho',
+    component: () => import('layouts/StoreLayout.vue'),
+    children: [{ path: '', component: () => import('pages/CartPage.vue') }],
   },
 
   // Always leave this as last one,

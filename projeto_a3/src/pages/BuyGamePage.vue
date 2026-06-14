@@ -11,7 +11,7 @@
         </div>
 
         <div class="col-12 col-md-5">
-          <BuyGameDetailsCard :game="game" />
+          <BuyGameDetailsCard :game="game" @add-to-cart="addToCart" />
         </div>
       </div>
 
@@ -25,6 +25,7 @@
 <script setup>
 import BuyGameBannerCard from 'src/components/BuyGameBannerCard.vue'
 import BuyGameDetailsCard from 'src/components/BuyGameDetailsCard.vue'
+import { addGameToCart } from 'src/services/CartService'
 import { getGame } from 'src/services/GamesService'
 import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
@@ -47,6 +48,17 @@ function loadGame() {
     })
     .finally(() => {
       isLoading.value = false
+    })
+}
+
+function addToCart() {
+  addGameToCart(game.value)
+    .then(() => {
+      alert('Jogo adicionado ao carrinho')
+    })
+    .catch((error) => {
+      console.error(error)
+      alert('Erro ao adicionar jogo ao carrinho')
     })
 }
 
