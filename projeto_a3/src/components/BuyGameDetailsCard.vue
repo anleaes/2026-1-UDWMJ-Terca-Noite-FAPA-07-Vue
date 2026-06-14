@@ -22,7 +22,7 @@
     </q-card-section>
 
     <q-card-actions>
-      <q-btn color="positive" label="Comprar" class="full-width" />
+      <q-btn color="positive" label="Adicionar ao Carrinho" class="full-width" @click="$emit('add-to-cart')" />
     </q-card-actions>
   </q-card>
 </template>
@@ -36,4 +36,6 @@ defineProps({
     required: true,
   },
 })
+
+defineEmits(['add-to-cart'])
 </script>
