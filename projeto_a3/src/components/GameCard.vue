@@ -1,6 +1,6 @@
 <template>
   <q-card class="my-card full-height cursor-pointer zoom-card" @click="$emit('select')">
-    <img :src="game.imagem" width="460" height="215" />
+    <q-img :src="game.imagem" :ratio="16 / 9" />
 
     <q-card-section>
       <div class="text-h6">{{ game.nome }}</div>

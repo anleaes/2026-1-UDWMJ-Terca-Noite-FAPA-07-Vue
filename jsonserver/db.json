@@ -490,6 +490,16 @@
       "nome": "Dedução Social / Multiplayer"
     }
   ],
-  "carrinho": [],
+  "carrinho": [
+    {
+      "id": "3xnGAtYf6Uw",
+      "jogoId": "5",
+      "nome": "Grand Theft Auto V",
+      "estilo": "Ação / Aventura",
+      "valor": 120,
+      "imagem": "https://lockgamer.com/wp-content/uploads/2012/11/coverreg610-e1352422958989.jpg",
+      "descricao": "Explore a cidade de Los Santos e viva a vida de três criminosos bem diferentes neste aclamado jogo de mundo aberto."
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
